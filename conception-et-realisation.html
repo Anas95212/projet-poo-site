@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+            <meta name="Description" content="Rapport du projet de POO">
+            <meta name="langage de programmation" content="Java">
+            <meta name="author" content="TAHRI Anas">
+        <link rel="icon"  href="Images/logo.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Conception et réalisation</title>
+    
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html"><img  src="Images/logo-cy.png" alt="logo" title="Revenir à l'accueil" style="width:300px;height:100px;"></a>
+                <hr>
+                <ul>
+                    <li><a class="blanc" href="intro-et-specification.html">Introduction</a></li>
+                    <li><a class="blanc" href="intro-et-specification.html">Spécifications</a></li>
+                    <li><a class="blanc" href="conception-et-realisation.html">Conception et réalisation</a></li>
+                    <li><a class="blanc" href="deroulement-et-conclusion.html">Déroulement</a></li>
+                    <li><a class="blanc" href="deroulement-et-conclusion.html">Conclusion</a></li>
+                </ul>
+                <h1>Conception et réalisation du projet:</h1>
+                <p class="blanc">Dans cette section nous allons voir le diagramme de classes UML et nous allons aborder la conception des classes.</p>
+            </nav>
+        </header>
+        <main>
+        <section>
+            <h2>Diagramme de classes UML:</h2>
+            <article>
+                <figure>
+                    <img  src="Images/diagramme.png" alt="diagramme UML" style="width:900px;height:350px">
+                </figure>
+            </article>
+        </section>
+        <section>
+            <h2>Conception des classes:</h2>
+            <article>
+                <p>La première classe <strong>ExtractMetadata</strong> est conçue pour l’extraction et la modification des métadonnées.
+                Afin d’extraire et de modifier les métadonnées nous avions besoin du module « Aspose Words » qui est compatible sous Java1.11.
+                Pour l’extraction des métadonnées nous avons eu besoin de créer une méthode « metadata » avec en paramètre le chemin du fichier.
+                Nous avons ensuite instancier un document en récupérant le chemin saisi en paramètre. Après instanciation du document
+                nous avons affichés le titre et toutes les autres métadonnées à l’aide de la méthode get… suivi du nom de la métadonnée
+                (exemple : getTitle() pour le titre…).  Pour la modification des métadonnées, nous avons eu besoin de créer plusieurs méthodes 
+                (1 par métadonnée). Prenons comme exemple la méthode editTitle() pour modifier le titre. La méthode editTtile prend 2 paramètres,
+                le chemin du fichier et le nouveau titre. Pour modifier la métadonnée du titre, nous avons d’abord besoin d’instancier le document
+                en récupérant le chemin de ce dernier, nous avons également besoin d’appeler la méthode setTitle() avec en paramètre le nouveau
+                titre. Pour finir, nous avons besoin d’appeler la méthode save() pour enregistrer les modifications apportées.</p>
+
+                <p>La seconde classe <strong>ListFiles</strong> est conçue pour l’exploration des fichiers dans un répertoire et ne garder que les fichiers ODT.
+                Afin d’explorer ces fichiers nous avons conçu 2 méthodes : «traverseDirectory » qui parcours un répertoire et « Directory » 
+                qui filtre et affiche les fichiers ODT retenus grâce au filtre. Grâce au chemin récupéré en paramètre on a pu instancier le dossier
+                pour ensuite le parcourir et n’en retenir que les fichiers OpenDocument (ODT).La troisième classe <strong>Cli</strong> est conçue pour le
+                fonctionnement en mode console. Elle comporte une seule méthode main qui récupère les arguments lors de l’exécution et appelle
+                les différentes méthodes. Pour savoir quelle méthode appeler nous avons mis en place des conditions 
+                (-d pour le parcours, -f pour l’extraction…). Exemple : lors de la commande « java -jar Cli.jar -d chemin… » la méthode main 
+                récupérera le premier argument « -d » elle appellera ensuite la méthode Directory() en lui passant comme paramètre le 2 ème 
+                argument récupéré c’est à dire le chemin. La dernière classe <strong>Gui</strong> est conçue pour le fonctionnement en mode graphique. 
+                Elle comporte un constructeur Gui() pour y instancier les boutons… de notre application et une méthode main pour afficher 
+                l’interface. Dans cette classe on a créer plusieurs boutons pour les différentes fonctionnalités : « Visualiser les métadonnées » 
+                pour l’extraction des métadonnées, « Explorer l’arborescence » pour explorer l’arborescence et ne garder que les fichiers ODT. 
+                Nous avons également instancié 2 JtextField. Le premier pour récupérer le chemin du dossier ou du fichier et le second pour y 
+                saisir la modification de la métadonnée qu’on souhaite modifier avant d’appuyer sur le bouton en question qui enregistrera les 
+                changements. </p>
+            </article>
+        </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div>
+                    <div>
+                        <a href="intro-et-specification.html"> Page Précédente</a>
+                    </div>
+                </div>
+                <p class="copyright">Anas TAHRI © 28/01/2023</p>
+            </div>
+                    <div>
+                        <a href="deroulement-et-conclusion.html">Page Suivante</a> 
+                    </div>
+            <hr>
+        </footer>
+
+    </body>
+    
+</html>

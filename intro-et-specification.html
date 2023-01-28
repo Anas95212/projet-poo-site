@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title> Introduction et Spécification</title>
+        <link rel="icon"  href="Images/logo.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+            <a href="index.html"><img  src="Images/logo-cy.png" alt="logo" title="Revenir à l'accueil" style="width:300px;height:100px;"></a>
+            <hr>
+            <ul>
+              <li><a class="blanc" href="intro-et-specification.html">Introduction</a></li>
+              <li><a class="blanc" href="intro-et-specification.html">Spécifications</a></li>
+              <li><a class="blanc" href="conception-et-realisation.html">Conception et réalisation</a></li>
+              <li><a class="blanc" href="deroulement-et-conclusion.html">Déroulement</a></li>
+              <li><a class="blanc" href="deroulement-et-conclusion.html">Conclusion</a></li>
+            </ul>
+            <h1>Introduction et Spécifications:</h1>
+            </nav>
+        </header>
+        <main>
+        <section>
+            <h2>Introduction:</h2>
+            <p>Nous allons commencer par présenter et expliquer brièvement le projet qui nous a été confié.</p>
+            <article>
+            <h3> Contexte du projet :</h3>
+            <p>On s’intéresse dans ce projet aux fichiers de type OpenDocument. Ces fichiers possèdent des métadonnées : 
+                des informations complémentaires stockées dans le fichier principal mais qui ne font pas partie du contenu directement visible. </p>
+            <h3> Objectif du projet :</h3>
+            <p>Notre objectif sera de réaliser un programme permettant à l’utilisateur de :</p>
+               
+               <ul>
+                <li>Extraire les métadonnées d’un fichier ODT</li>
+                <li>Explorer complètement un répertoire et ne retenir que les fichiers ODT ou ODF de cette arborescence</li>
+                <li>Renseigner les métadonnées manquantes</li>
+               </ul>
+            <h3>Organisation du rapport:</h3>
+            <p>Pour l’organisation du rapport, la partie Introduction est rédigée par Anas,
+                 la partie Spécification du projet est rédigée par Younes, les parties 3 et 4 sont rédigées par le binôme et la partie 5 est rédigée par Anas.</p>
+            </article>
+        </section>
+        <section>
+            <h2>Spécifications du projet:</h2>
+            <article>
+            <h3>Fonctionnement général du logiciel:</h3>
+            <p>Notre logiciel possède 2 modes :</p>
+              <ul>
+                <li>Le mode console (terminal)</li>
+                <li>Le mode graphique</li>
+              </ul>
+                <p>Pour le <strong>mode console</strong>, les paramètres attendus sur la ligne de commande sont : le nom du fichier ODT à analyser pour en extraire les métadonnées
+                ou le nom du dossier à explorer pour extraire la liste des fichiers ODT : vous utiliserez un paramètre supplémentaire permettant de spécifier le
+                type d’entrée (« -f » (file) pour un fichier, « -d » (directory) dans le cas d’un répertoire : ces 2 options étant exclusives l’une de l’autre).
+                Le programme doit afficher directement dans la console le résultat de son analyse. Si aucun paramètre n’est indiqué, 
+                le programme affiche un message d’erreur fonctionnel ; avec l’option « -h » (help), le programme affiche l’aide et les options possibles.
+                Deux options supplémentaires concernent le renseignement de métadonnées : « --title » permet de modifier ou d’ajouter la métadonnée de titre au document
+                et « --subject » permet de modifier ou d’ajouter un sujet au document .</p>
+                
+                <p> Pour le <strong>mode graphique</strong>, il y aura un champ permettant de récupérer le chemin du dossier à explorer ou bien le chemin du fichier auquel on souhaite extraire,
+                ou modifier ses métadonnées. Pour extraire les métadonnées, l’utilisateur rentre le chemin du fichier dans le champ de saisie puis clique sur 
+                le bouton « Extraire les métadonnées ». Pour explorer un dossier, l’utilisateur rentre le chemin du dossier dans le champ de saisie puis clique sur le bouton
+                « Explorer l’arborescence ». Pour modifier les métadonnées, l’utilisateur rentre le chemin du fichier dans le champ de saisie puis clique sur le bouton
+                « Modifier les métadonnées » puis les modifie.</p> 
+
+            <h3>Fonctionnalités du projet:</h3>
+            <p>Les fonctionnalités sont:</p>
+          <ul>
+            <li> l’extraction des métadonnées</li>
+            <li>l’exploration d’un dossier</li>
+            <li>la modification des métadonnées</li>
+          </ul>
+            <p> Ces 3 dernières doivent fonctionner en mode console et en mode graphique.</p>
+            </article>
+
+        </section>
+        </main>
+        <footer>
+          <div class="container">
+              <div>
+                  <div>
+                      <a href="intro-et-specification.html"> Page Précédente</a>
+                  </div>
+              </div>
+              <p class="copyright">Anas TAHRI © 28/01/2023</p>
+          </div>
+                  <div>
+                      <a href="conception-et-realisation.html">Page Suivante</a> 
+                  </div>
+          <hr>
+      </footer>
+    </body>
+
+</html>
